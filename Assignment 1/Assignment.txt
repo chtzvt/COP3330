@@ -1,0 +1,70 @@
+Assignment  Chapter 2
+
+Please Note: For java files upload a .java file, for problems you may upload in .txt .doc and .pdf format or provide your answers in line below.
+
+2.7 [2 points] Fill in the blanks in each of the following statements:
+
+a)____________ are used to document a program and improve its readability.
+
+b) A decision can be made in a Java program with a(n) ____________.
+c) Calculations are normally performed by ____________ statements.
+d) The arithmetic operators with the same precedence as multiplication are and_________.
+e) When parentheses in an arithmetic expression are nested, the ____________set of parentheses
+is evaluated first.
+
+f) A location in the computer’s memory that may contain different values at various times
+throughout the execution of a program is called a(n) ____________ .
+
+ 
+
+2.8 [2 points] Write Java statements that accomplish each of the following tasks:
+
+a) Display the message "Enter an integer: ", leaving the cursor on the same line.
+b) Assign the product of variables b and c to variable a.
+c) Use a comment to state that a program performs a sample payroll calculation.
+ 
+
+2.9 [2 points] State whether each of the following is true or false. If false, explain why.
+
+a) Java operators are evaluated from left to right.
+b) The following are all valid variable names: _under_bar_, m928134, t5, j7, her_sales$,
+his_$account_total, a, b$, c, z and z2.
+
+c) A valid Java arithmetic expression with no parentheses is evaluated from left to right.
+d) The following are all invalid variable names: 3g, 87, 67h2, h22 and 2h.
+ 
+
+2.10 [2 points] Assuming that x = 2 and y = 3, what does each of the following statements display?
+
+a) out.printf("x = %d%n", x);
+b) out.printf("Value of %d + %d is %d%n", x, x, (x + x));
+c) out.printf("x =");
+d) out.printf("%d = %d%n", (x + y), (y + x));
+ 
+
+2.11 [2 points] Which of the following Java statements contain variables whose values are modified?
+
+a) p = i + j + k + 7;
+b) out.println("variables whose values are modified");
+c) out.println("a = 5");
+d) value = input.nextInt();
+2.12 [2 points] Given that y = ax3 + 7, which of the following are correct Java statements for this equation?
+
+a) y = a * x * x * x + 7;
+b) y = a * x * x * (x + 7);
+c) y = (a * x) * x * (x + 7);
+d) y = (a * x) * x * x + 7;
+e) y = a * (x * x * x) + 7;
+f) y = a * x * (x * x + 7);
+2.13 [2 points] State the order of evaluation of the operators in each of the following Java statements, and
+
+show the value of x after each statement is performed:
+
+a) x = 7 + 3 * 6 / 2 - 1;
+b) x = 2 % 2 + 2 * 2 - 2 / 2;
+c) x = (3 * 9 * (3 + (9 * 3 / (3))));
+2.25 [6 points] (Odd or Even) Write an application that reads an integer and determines and prints whether
+
+it’s odd or even. [Hint: Use the remainder operator. An even number is a multiple of 2. Any multiple
+
+of 2 leaves a remainder of 0 when divided by 2.]
