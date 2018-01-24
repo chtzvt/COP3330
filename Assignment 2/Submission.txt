@@ -1,0 +1,89 @@
+3.5 (Keyword new) What’s the purpose of keyword new? Explain what happens when you use it.
+
+  In Java, the keyword `new` is used when creating a new instance of a class. For example,
+  if one were to create a new instance of a class called ExampleClass, they would use the
+  following code:
+    ExampleClass exampleclass = new ExampleClass();
+    
+  The result is that a new instance of ExampleClass has been created, which is accessible through the
+  variable exampleclass.
+
+3.6 (Default Constructors) What is a default constructor? How are an object’s instance variables
+initialized if a class has only a default constructor?
+
+  In Java, when a class has been defined without a corresponding constructor within that class, the
+  Java compiler will automatically use a "default" (aka nullary) constructor. This default constructor will automatically
+  initialize any of the class' instance variables to their default values (null for Strings, 0 for ints, and so on),
+  as well as call the class' superclass without any arguments (if applicable).
+
+3.7 (Instance Variables) Explain the purpose of an instance variable.
+
+  An instance variable is a variable that exists within an instance of a class.
+  These may be either public or private.
+  
+  Consider the following example code:
+  
+    public class ExampleClass {
+        private int mynum;
+        
+        public ExampleClass(int num){
+          mynum = num;
+        }
+        
+        public int getNum() {
+          return mynum;
+        }
+    }
+    
+    ExampleClass example1 = new ExampleClass(4);
+    ExampleClass example2 = new ExampleClass(2);
+  
+  While both example1 and example2 are instances of the ExampleClass class, they each have their own copies of the
+  variable mynum, which are private to each instance.
+
+3.8 (Using Classes without Importing Them) Most classes need to be imported before they can
+be used in an app. Why is every app allowed to use classes System and String without first importing them?
+
+  Java imports several packages by default for each class. Included in these is the Java.lang package, which
+  includes both the System and String classes (as Java.lang.System and Java.lang.String, respectively).
+
+3.10 (set and get Methods) Explain why a class might provide a set method and a get method for an
+instance variable.
+
+  Classes may define instance variables in a myriad of ways, but perhaps the most basic of these are as
+  public or private. When variables are scoped as private, it means that variable may be directly read or
+  modified only within the scope of that class, and not from any other code. This necessitates getter and
+  setter methods, which allow code outside of the class to read and/or write to those private instance
+  variables in a controlled manner.
+  
+  For cases where particular variables require some amount of validation,
+  this is particularly useful as it ensures any value attempting to be written to that variable must first
+  pass the checks in the setter method.
+
+---
+
+Programming assignments:
+
+3.12 [5 points] (Invoice Class) Create a class called Invoice that a hardware store might use to represent
+an invoice for an item sold at the store. An Invoice should include four pieces of information as
+instance variables—a part number (type String), a part description (type String), a quantity of the
+item being purchased (type int) and a price per item (double). Your class should have a constructor
+that initializes the four instance variables. Provide a set and a get method for each instance variable.
+In addition, provide a method named getInvoiceAmount that calculates the invoice amount (i.e.,
+multiplies the quantity by the price per item), then returns the amount as a double value. If the
+quantity is not positive, it should be set to 0. If the price per item is not positive, it should be set to
+0.0. Write a test app named InvoiceTest that demonstrates class Invoice’s capabilities.
+
+
+3.13 [5 points] (Employee Class) Create a class called Employee that includes three instance variables—a
+first name (type String), a last name (type String) and a monthly salary (double). Provide a constructor
+that initializes the three instance variables. Provide a set and a get method for each instance
+variable. If the monthly salary is not positive, do not set its value. Write a test app named EmployeeTest
+that demonstrates class Employee’s capabilities. Create two Employee objects and display each
+object’s yearly salary. Then give each Employee a 10% raise and display each Employee’s yearly salary
+again.
+
+
+Provide a set and a get method for each
+instance variable. Provide a method displayDate that displays the month, day and year separated
+by forward slashes (/). Write a test app named DateTest that demonstrates class Date’s capabilities.
