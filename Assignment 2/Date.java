@@ -31,6 +31,7 @@ public class Date {
     this.year = y;
   }
   
+  // Prints the stored date to stdout in m/d/y format.
   public void displayDate() {
     System.out.printf("%d/%d/%d%n", this.month, this.day, this.year);
   }

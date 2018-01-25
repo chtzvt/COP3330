@@ -30,6 +30,8 @@ public class Invoice {
     return this.quantity;
   }
 
+  // Allows for the modification of an Invoice instance's quantity
+  // value, so long as the new value is non-negative
   public void setQuantity(int quant) {
     this.quantity = (quant >= 0) ? quant : 0;
   }
@@ -38,6 +40,8 @@ public class Invoice {
     return this.price_per_unit;
   }
 
+  // Allows for the modification of an Invoice instance's price per
+  // unit, so long as the new value is non-negative
   public void setUnitPrice(double ppu) {
     this.price_per_unit = (ppu >= 0) ? ppu : 0.0;
   }

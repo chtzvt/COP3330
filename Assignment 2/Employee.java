@@ -28,6 +28,8 @@ public class Employee {
     return this.monthly_salary;
   }
 
+  // This method allows the value of monthly_salary to be updated, so long as the
+  // new value is greater than zero. Otherwise, this value is unchanged.
   public void setMonthlySalary(double salary) {
     this.monthly_salary = (salary > 0) ? salary : this.monthly_salary;
   }
