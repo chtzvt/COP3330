@@ -11,9 +11,27 @@ The exact output is as follows:
     >>>>>>>>>>
     <<<<<<<<<<
 
-4.34 In this statement, the main issue is the use of the ++ increment operator
+4.34 In this statement, the error is the use of the ++ increment operator
 on the expression (x + y), which is not valid. To properly print the sum of x and y,
-one would have to use the following:
+one would use the following:
   System.out.println((x + y + 1));
   
-4.35 See Triangle.java, attached.
+4.35 See the file Triangle.java, attached.
+
+5.8 A `break` statement will exit a loop completely, whereas a `continue` statement
+will merely skip over the current iteration.
+
+A `continue` statement might be useful if there is a condition in a loop where no
+further processing is necessary, but where there may be in future iterations.
+
+Conversely, a `break` statement would be used in a case where continuing over
+further iterations would definitely not be needed.
+
+5.9 The provided code would result in an infinite loop, as i will always satisfy
+the condition of being greater than or equal to 1. This might be fixed by using
+the decrement operator -- in place of ++.
+
+Additionally, the capitalized 'For' should be substituted with the correct keyword
+`for`.
+
+5.29 See the file TwelveDays.java, attached.
