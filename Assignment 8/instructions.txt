@@ -1,0 +1,28 @@
+Assignment 8
+
+Instruction to import a JAR file
+
+[  A .jar is an archive file that contains multiple .java files.  You need to import it into your eclipse.
+
+Instructions: In Eclipse click on the File Menu --> Import --> General --> Archive FILE.
+First create a project before you import.
+Or you may open it using a zip utility and drag & drop each file into an Eclipse project. ]
+
+
+Download and import PayrollSystem.jar as a Java project into your Eclipse.
+Modify this payroll system to include an additional Employee subclass PieceWorker that represents an
+employee whose pay is based on the number of pieces of merchandise produced.
+
+Class PieceWorker should contain private instance variables wage (to store the employee’s wage per piece)
+and pieces (to store the number of pieces produced).
+
+Provide a concrete implementation of method earnings in class PieceWorker that calculates the
+employee’s earnings by multiplying the number of pieces produced
+by the wage per piece.
+
+Create an array of Employee variables to store references to objects of each
+concrete class in the new Employee hierarchy.
+
+For each Employee, display its String representation and earnings.
+
+Note: You only need to submit one file, the PieceWorker class.
