@@ -1,0 +1,63 @@
+Assignment Strings
+
+Note: Only .jar file is allowed for submission. Instructions to generate a jar file: In Eclipse go to, File-->New-->Export-->General-->Archive File.  In the file name field, enter  Assignment_9.jar.
+
+ 
+
+To examine three methods for analyzing texts with a computer:
+
+a. Write an application that reads a line of text from the keyboard and prints a table indicating the number of occurrences of each letter of the alphabet in the text. For example, the phrase
+
+         To be, or not to be: that is the question:
+
+contains one “a,” two “b’s,” no “c’s,” and so on.
+
+ 
+
+b. Write an application that reads a line of text and prints a table indicating the number of one-letter words, two-letter words, three-letter words, and so on, appearing in the text. For example, Fig a. shows the counts for the phrase
+
+          Whether 'tis nobler in the mind to suffer
+
+c. Write an application that reads a line of text and prints a table indicating the number of occurrences of each different word in the text. The application should include the words in the table in the same order in which they appear in the text. For example, the lines
+
+         To be, or not to be: that is the question:
+
+         Whether 'tis nobler in the mind to suffer
+
+contain the word “to” three times, the word “be” two times, the word “or” once, etc.
+
+ 
+
+Word length
+
+Occurrences
+
+1
+
+0
+
+2
+
+2
+
+3
+
+1
+
+4
+
+2 (including 'tis)
+
+5
+
+0
+
+6
+
+2
+
+7
+
+1
+
+Fig. a  Word-length counts for the string "Whether 'tis nobler in the mind to suffer".
