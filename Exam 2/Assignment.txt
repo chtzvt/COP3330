@@ -1,0 +1,173 @@
+Exam 2      Note: Your program solution may only be uploaded in .jar format.  No other format will be graded.
+
+Suppose that you are required to write an application to model interns and supervisors in a company.
+
+ 1- Define an abstract superclass called Staff to store two properties as:
+
+              >>>                    String name;
+
+              >>>                    String address;
+
+              >>>     [4 points] Provide (only one) constructor which sets the name and address properties.
+
+                >>>   [6 points] Provide getters & setters and toString() methods for the class Staff.
+
+ 2- Define:
+
+              >>>   [2 points] Two subclasses of Staff, one named Intern and one Supervisor.
+
+              >>>   [3 points] Both classes, Intern and Supervisor must implement the interface StaffInfo, provided below.
+
+ 3- Requirements for the class Intern:
+
+should maintain a list of tasks taken and the respective hours for each task.
+an intern cannot have more than 10 tasks
+should also provide a method to add a task with hours
+print all tasks taken with task description and hours
+calculate the average hours of the tasks assigned
+                    >>>      [5 points]  Intern(…) constructor calling the parent constructor
+
+                >>>          [5 points]  private instance variables: numTasks,  taskList[], hourList[], MaxNumTasks=10
+
+                  >>>        [5 points]  toString() method to describe itself. Add the string “Intern: ” to the beginning.
+
+                  >>>        [5 points]  addTaskHours(task, hours) adds a task and its hours.   Validate that task description is not null and hours  are  greater than zero
+
+                    >>>      [5 points] // printHours() prints all Tasks taken and their hour
+
+                    >>>      [5 points] // getAverageHour() computes the average hour
+
+ 4- Requirements for the class Supervisor:
+
+should maintain a list of tasks they currently supervise
+be able to add or remove a task supervised
+assume that a supervisor cannot supervise more than 5 tasks
+                >>>     [5 points]  private instance variables: numTasks,  taskList[], MaxNumTasks=5
+
+                >>>     [5 points]  Supervisor (…) constructor calling the parent constructor
+
+              >>>       [5 points]  toString() method to describe itself. Add the string “Superviser: ” to the beginning.
+
+              >>>       [5 points]  addTask(task) adds a task to task list. Returns false if task already in the list.
+
+                >>>     [5 points]  removeTask (task) removes a task from task list.  Returns false if task not found.
+
+Note: Your program solution may only be uploaded in .jar format.  No other format will be graded.
+
+ 
+
+Interface to be implemented by the Intern & the Supervisor class as described in item 2 above.
+
+/**************************************************
+
+ * StaffInfo interface declaration.
+
+ **************************************************/
+
+public interface StaffInfo {
+
+   // Returns (String “Supervisor” or “Intern”), name + address of the staff
+
+   String getStaffInfo();
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+                                     End
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+
+Optional: You may use this test driver class to test your program.
+
+/**************************************************
+
+ * A test driver for Staff and its subclasses.
+
+ **************************************************/
+
+public class TestStaff {
+
+        public static void main(String[] args) throws Exception {
+
+              /* Test Intern class */
+
+             Intern i1;
+
+             try {
+
+                    i1 = new Intern("Jane Smith", "1 Knights Plaza @ UCF");
+
+                    System.out.println(i1);
+
+                    i1.addTaskHours("Programming", 20);
+
+                    i1.addTaskHours("Admin", 5);
+
+                    i1.printHours();
+
+                    System.out.println("Average is " + i1.getAverageHour());
+
+                    i1.addTaskHours("ShouldGiveException", 0);
+
+             } catch (Exception e) {
+
+                    System.out.println(e);
+
+             }
+
+              /* Test Supervisor class */
+
+             Supervisor s1 = new Supervisor("John Smith", "UCF HEC 0119");
+
+             System.out.println(s1);
+
+             String[] tasks = { "Programming", "Admin", "Design" };
+
+              for (String task : tasks) {
+
+                    if (s1.addTask(task)) {
+
+                           System.out.println(task + " added.");
+
+                    }
+
+                    else {
+
+                           System.out.println(task + " cannot be added.");
+
+                    }
+
+             }
+
+             System.out.println("Add task Admin again: " + s1.addTask("Admin"));
+
+             System.out.println("Removing task Lunch: " + s1.removeTask("Lunch"));
+
+             System.out.println("Add task Lunch: " + s1.addTask("Lunch"));
+
+             System.out.println("Removing task Lunch: " + s1.removeTask("Lunch"));
+
+             for (String task : tasks) {
+
+                    if (s1.removeTask(task)) {
+
+                           System.out.println(task + " removed.");
+
+                    }
+
+                    else {
+
+                           System.out.println(task + " cannot be removed.");
+
+                    }
+
+             }
+
+       }
+
+}
+
+ 
