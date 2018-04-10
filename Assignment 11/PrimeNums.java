@@ -34,10 +34,10 @@ public class PrimeNums {
       if(num % 2 == 0 && num != 2) // even
           return false;
       
-      if(num == 3 || num == 2)
+      if(num == 3 || num == 2) // very small primes we won't bother to loop over
           return true;
 
-      for(int i = 3; i < ((int) Math.sqrt(num) + 1); i += 2){
+      for(int i = 3; i < ((int) Math.sqrt(num)+1); i += 2){
           if (num % i == 0)
               return false;
       }
