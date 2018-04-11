@@ -3,8 +3,8 @@
 
 
 // NOTE TO GRADER: I had to comment out the following line to make this class
-// visible to the provided ListTest class. In order to compile correctly, either
-// both classes should be in the same package, or neither should have one defined.
+// visible to the provided ListTest class. In order to compile correctly, it seems that
+// either both classes should be in the same package, or neither should have one defined.
 
 //  package com.deitel.datastructures;
 
